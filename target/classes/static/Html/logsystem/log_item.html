@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css"  media="all">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+
+        var logIndex = localStorage.getItem("logIndex");
+        var logPageValue = localStorage.getItem("logPageValue");
+        $("#l1").html("");
+
+        var logIndexInt = parseInt(logIndex);
+        logIndexInt = logIndexInt+2;
+        localStorage.setItem("logIndex",logIndexInt+"");
+
+        $.post("http://localhost:8099/getLog",function (data) {
+            console.info(data[0]);
+
+        });
+
+
+        var url = document.location.toString();//获取url地址
+        var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
+        var arr = urlParmStr.split('&');//通过&符号将字符串分割转成数组
+        var courseId = arr[0].split("=")[1];//获取数组中第一个参数
+        console.log(courseId);
+        $("#task1_name").attr("value",courseId);
+
+
+    </script>
+
+</head>
+<body>
+<div class="layui-col-xs12">
+<div style="padding: 20px; background-color: #F2F2F2;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header" >
+                    <p id="task1_name">
+                        卡片面板
+                    </p>
+                </div>
+                <div class="layui-card-body">
+                    <p id="task_l1"> 结合 layui 的栅格系统
+                        轻松实现响应式布局</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header" id="task2_name">卡片面板</div>
+                <div class="layui-card-body"  >
+                    <p id="task_l2"> 结合 layui 的栅格系统
+                        轻松实现响应式布局</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</body>
+</html>
