@@ -36,7 +36,12 @@ public class JqueryRequestTool {
     }
     public String jsonValue;
     public JSONObject jsonObject;
+    public JqueryRequestTool(JSONObject inputJSON){
 
+        this.jsonObject = inputJSON;
+        this.jsonValue = inputJSON.toString();
+
+    }
 
     public JqueryRequestTool(HttpServletRequest request){
 
