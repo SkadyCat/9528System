@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../layui/css/lxr.css"  media="all">
+    <script src="../../js/CommonTool.js"></script>
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+
+<body>
+
+
+
+<div class="layui-collapse" lay-filter="test">
+    <div class="layui-colla-item">
+        <!--<h2 class="layui-colla-title">为什么JS社区大量采用未发布或者未广泛支持的语言特性？</h2>-->
+        <!--<div class="layui-colla-content">-->
+            <!--<p>有不少其他答案说是因为JS太差。我下面的答案已经说了，这不是根本性的原因。但除此之外，我还要纠正一些对JS具体问题的误解。JS当初是被作为脚本语言设计的，所以某些问题并不是JS设计得差或者是JS设计者的失误。比如var的作用域问题，并不是“错误”，而是当时绝大部分脚本语言都是这样的，如perl/php/sh等。模块的问题也是，脚本语言几乎都没有模块/命名空间功能。弱类型、for-in之类的问题也是，只不过现在用那些老的脚本语言的人比较少，所以很多人都误以为是JS才有的坑。另外有人说JS是半残语言，满足不了开发需求，1999年就该死。半残这个嘛，就夸张了。JS虽然有很多问题，但是设计总体还是优秀的。——来自知乎@贺师俊</p>-->
+        <!--</div>-->
+        <h2 class="layui-colla-title">知名人物</h2>
+        <div class="layui-colla-content" style="overflow:hidden"  >
+            <a
+               data-method="offset1" class="layui-btn" id="login_btn">
+                <img   style="width:5%;height:5%;float: left" src="../../image/l1.jpeg"/>
+                <h3 style="float: right">王二麻子</h3>
+            </a>
+            </br>
+            <a >
+                <img  style="width:5%;height:5%;float: left" src="../../image/l1.jpeg"/>
+                <h3 style="float: right">王二麻子</h3>
+            </a>
+
+            <!--<p>有不少其他答案说是因为JS太差。我下面的答案已经说了，这不是根本性的原因。但除此之外，我还要纠正一些对JS具体问题的误解。JS当初是被作为脚本语言设计的，所以某些问题并不是JS设计得差或者是JS设计者的失误。比如var的作用域问题，并不是“错误”，而是当时绝大部分脚本语言都是这样的，如perl/php/sh等。模块的问题也是，脚本语言几乎都没有模块/命名空间功能。弱类型、for-in之类的问题也是，只不过现在用那些老的脚本语言的人比较少，所以很多人都误以为是JS才有的坑。另外有人说JS是半残语言，满足不了开发需求，1999年就该死。半残这个嘛，就夸张了。JS虽然有很多问题，但是设计总体还是优秀的。——来自知乎@贺师俊</p>-->
+
+        </div>
+        <!--</br>-->
+    </div>
+
+    <div class="layui-colla-item">
+        <!--<h2 class="layui-colla-title">为什么前端工程师多不愿意用 Bootstrap 框架？</h2>-->
+        <!--<div class="layui-colla-content">-->
+            <!--<p>因为不适合。如果希望开发长期的项目或者制作产品类网站，那么就需要实现特定的设计，为了在维护项目中可以方便地按设计师要求快速修改样式，肯定会逐步编写出各种业务组件、工具类，相当于为项目自行开发一套框架。——来自知乎@Kayo</p>-->
+        <!--</div>-->
+        <h2 class="layui-colla-title">网红声优</h2>
+        <div class="layui-colla-content" style="overflow:hidden"  >
+            <a href="about.html">
+                <img  style="width:5%;height:5%;float: left" src="../../image/l1.jpeg"/>
+                <h3 style="float: right">王二麻子</h3>
+            </a>
+
+            </br>
+            <img  style="width:5%;height:5%;float: left" src="../../image/l1.jpeg"/>
+            <h3 style="float: right">王二麻子</h3>
+            <!--<p>有不少其他答案说是因为JS太差。我下面的答案已经说了，这不是根本性的原因。但除此之外，我还要纠正一些对JS具体问题的误解。JS当初是被作为脚本语言设计的，所以某些问题并不是JS设计得差或者是JS设计者的失误。比如var的作用域问题，并不是“错误”，而是当时绝大部分脚本语言都是这样的，如perl/php/sh等。模块的问题也是，脚本语言几乎都没有模块/命名空间功能。弱类型、for-in之类的问题也是，只不过现在用那些老的脚本语言的人比较少，所以很多人都误以为是JS才有的坑。另外有人说JS是半残语言，满足不了开发需求，1999年就该死。半残这个嘛，就夸张了。JS虽然有很多问题，但是设计总体还是优秀的。——来自知乎@贺师俊</p>-->
+
+        </div>
+    </div>
+    <div class="layui-colla-item">
+        <!--<h2 class="layui-colla-title">layui 更适合哪些开发者？</h2>-->
+        <!--<div class="layui-colla-content">-->
+            <!--<p>在前端技术快速变革的今天，layui 仍然坚持语义化的组织模式，甚至于模块理念都是采用类AMD组织形式，并非是有意与时代背道而驰。layui 认为以jQuery为核心的开发方式还没有到完全消亡的时候，而早期市面上基于jQuery的UI都普通做得差强人意，所以需要有一个新的UI去重新为这一领域注入活力，并采用一些更科学的架构方式。-->
+                <!--<br><br>-->
+                <!--因此准确地说，layui 更多是面向那些追求开发简单的前端工程师们，以及所有层次的服务端程序员。</p>-->
+        <!--</div>-->
+
+        <h2 class="layui-colla-title">女神艺人</h2>
+        <div class="layui-colla-content" style="overflow:hidden"  >
+            <img  style="width:5%;height:5%;float: left" src="https://hbimg.huabanimg.com/9f30116ac5bf22939a564dc9787ea996d119a06874d01-nuVoFp_fw658"/>
+            <h3 style="float: right">王二麻子</h3>
+            </br>
+            <img  style="width:5%;height:5%;float: left" src="https://hbimg.huabanimg.com/9f30116ac5bf22939a564dc9787ea996d119a06874d01-nuVoFp_fw658"/>
+            <h3 style="float: right">王二麻子</h3>
+            <!--<p>有不少其他答案说是因为JS太差。我下面的答案已经说了，这不是根本性的原因。但除此之外，我还要纠正一些对JS具体问题的误解。JS当初是被作为脚本语言设计的，所以某些问题并不是JS设计得差或者是JS设计者的失误。比如var的作用域问题，并不是“错误”，而是当时绝大部分脚本语言都是这样的，如perl/php/sh等。模块的问题也是，脚本语言几乎都没有模块/命名空间功能。弱类型、for-in之类的问题也是，只不过现在用那些老的脚本语言的人比较少，所以很多人都误以为是JS才有的坑。另外有人说JS是半残语言，满足不了开发需求，1999年就该死。半残这个嘛，就夸张了。JS虽然有很多问题，但是设计总体还是优秀的。——来自知乎@贺师俊</p>-->
+
+        </div>
+    </div>
+</div>
+
+<script src="../../layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+
+
+$("#login_btn").click(function () {
+
+ console.info("选择王2麻子");
+        var initChat = {};
+        initChat.user_acc = "zfj"
+        <!--$("#user_acc").val();-->
+        initChat.user_friend = "w2mz"
+        <!--$("#user_friend").val();-->
+        $.get("http://localhost:8099/initChat",initChat,function (data) {
+
+                console.info(data);
+            localStorage.setItem("chat_id",data.reValue);
+            localStorage.setItem("user_acc", "zfj");
+            <!--$("#user_acc").val());-->
+            <!--window.location.href = "chat_window.html";-->
+        });
+
+
+        });
+
+    function creat() {
+//----------用户创建房间------------------//
+
+
+
+    }
+
+
+</script>
+<script>
+
+layui.use(['element', 'layer'], function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery; //独立版的layer无需执行这一句
+   var element = layui.element;
+  var layer = layui.layer;
+
+  //触发事件
+  var active = {
+    setTop: function(){
+
+      var that = this;
+      //多窗口模式，层叠置顶
+      layer.open({
+        type: 2 //此处以iframe举例
+        ,offset1: [ //为了演示，随机坐标
+          Math.random()*($(window).height()-300)
+          ,Math.random()*($(window).width()-390)
+        ]
+
+      });
+    }
+
+    ,offset1: function(othis){
+     console.info("333333333333");
+
+      var type = othis.data('type')
+      ,text = othis.text();
+      layer.open({
+        type: 1
+        <!--,offset1: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset1-->
+        ,id: 'layerDemo'+type //防止重复弹出
+        ,content: '<div style="padding:200px 150px"><iframe frameborder="no" src="chat_window.html" scrolling="auto"src="chat.html"></iframe></div>'
+        <!--,btn: '关闭全部'-->
+        ,btnAlign: 'c' //按钮居中
+        ,shade: 0 //不显示遮罩
+        ,yes: function(){
+          layer.closeAll();
+        }
+      });
+    }
+  };
+
+  $('#layerDemo .layui-btn').on('click', function(){
+    var othis = $(this), method = othis.data('method');
+    active[method] ? active[method].call(this, othis) : '';
+  });
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css"  media="all">
+    <script src="../../js/CommonTool.js"></script>
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+          .dialog{width:200px;height:200px;
+          border:solid 1px #000;
+          position:absolute;
+          right:10px;top:100px;
+          line-height:200px;
+          text-align:center;
+          display:none}
+        </style>
+</head>
+<script src="../../layui/layui.js" charset="utf-8"></script>
+
+<body>
+<button class="btn">Click me</button>
+<frame class="dialog" src="chat_window.html"></frame>
+
+<script src="../../layui/layui.js" charset="utf-8"></script>
+
+<script>
+        $(".btn").click(function(){
+$(".dialog").show(100)
+})
+    </script>
+</body>
+</html>

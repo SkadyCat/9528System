@@ -1,0 +1,122 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> hello </title>
+    <link rel="stylesheet" href="../../layui/css/layui.css"  media="all">
+
+</head>
+
+<body >
+<div >
+    <div class="grid-demo" style="position:absolute;bottom:0px;top:0px;left:0px;width:100%;height:30%;">
+    </div>
+    <div style="position:absolute;bottom:0px;left:0px;top:30%;width:70%;height:70%;" >
+
+    </div>
+    <div style="position:absolute;bottom:0px;left:70%;top:30%;width:30%;height:70%;">
+        <iframe  frameborder="no" src="chat.html" scrolling="auto"
+                style="position:absolute;bottom:0px;left:0px;top:0px;width:100%;height:100%;">
+
+        </iframe>
+    </div>
+</div>
+
+
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../layui/css/lxr.css"  media="all">
+    <script src="../../js/CommonTool.js"></script>
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body>
+
+
+
+<div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+    <button data-method="offset"  class="layui-btn" id="login_btn">登录</button>
+</div>
+
+<!-- 示例-970 -->
+<ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="3820120620"></ins>
+
+<script src="../../layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+
+layui.use(['element', 'layer'], function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery; //独立版的layer无需执行这一句
+   var element = layui.element;
+  var layer = layui.layer;
+
+  //触发事件
+  var active = {
+    setTop: function(){
+      var that = this;
+      //多窗口模式，层叠置顶
+      layer.open({
+        type: 2 //此处以iframe举例
+        ,offset: [ //为了演示，随机坐标
+          Math.random()*($(window).height()-300)
+          ,Math.random()*($(window).width()-390)
+        ]
+
+      });
+    }
+
+    ,offset: function(othis){
+      var type = othis.data('type')
+      ,text = othis.text();
+
+      console.info("234234234");
+        var initChat = {};
+        initChat.user_acc = "zfj"
+        <!--$("#user_acc").val();-->
+        initChat.user_friend = "w2mz"
+        <!--$("#user_friend").val();-->
+
+
+        $.get("http://localhost:8099/initChat",initChat,function (data) {
+
+                console.info(data);
+            localStorage.setItem("chat_id",data.reValue);
+            localStorage.setItem("user_acc", "zfj");
+            <!--$("#user_acc").val());-->
+            <!--window.location.href = "chat_window.html";-->
+        });
+
+      layer.open({
+        type: 1
+        <!--,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset-->
+        ,id: 'layerDemo'+type //防止重复弹出
+        ,content: '<div style="padding:200px 150px"><iframe frameborder="no" src="chat.html" scrolling="auto" style="position:absolute;bottom:0px;left:0px;top:0px;width:100%;height:100%;" src="chat.html"></iframe></div>'
+        <!--,btn: '关闭全部'-->
+        ,btnAlign: 'c' //按钮居中
+        ,shade: 0 //不显示遮罩
+        ,yes: function(){
+          layer.closeAll();
+        }
+      });
+    }
+  };
+
+  $('#layerDemo .layui-btn').on('click', function(){
+    var othis = $(this), method = othis.data('method');
+    active[method] ? active[method].call(this, othis) : '';
+  });
+
+});
+</script>
+
+</body>
+</html>
