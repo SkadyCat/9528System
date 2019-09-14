@@ -123,6 +123,16 @@ public class DataBaseOP {
         return obj;
     }
 
+    public static JSONObject requestSingle( String sqlValue) throws Exception {
+
+        String dataBase = dbName;
+        JSONArray array = request(dataBase,sqlValue);
+
+        JSONObject obj = (JSONObject) array.get(0);
+
+
+        return obj;
+    }
 
     public static JSONArray formatRsToJsonArray(ResultSet rs) throws Exception{
         ResultSetMetaData md = rs.getMetaData();//获取列数据
